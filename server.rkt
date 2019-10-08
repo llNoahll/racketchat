@@ -33,9 +33,9 @@
 
     (thread
      (λ () (map send-to
-                 (filter (λ (conn)
-                           (not (eq? conn sender-conn)))
-                         connections))))))
+                (filter (λ (conn)
+                          (not (eq? conn sender-conn)))
+                        connections))))))
 
 (define broadcast*
   (λ (msg (sender-conn '()))
@@ -60,9 +60,9 @@
     (if (null? sender-conn)
         (thread (λ () (map send-to connections)))
         (thread (λ () (map send-to
-                            (filter (λ (conn)
-                                      (not (eq? conn sender-conn)))
-                                    connections)))))))
+                           (filter (λ (conn)
+                                     (not (eq? conn sender-conn)))
+                                   connections)))))))
 
 (define handle
   (λ (connection)
