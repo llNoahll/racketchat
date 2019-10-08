@@ -2,6 +2,7 @@
 
 (require racket/tcp)
 
+
 (define PORT 1234)
 
 (define connections '())
@@ -51,11 +52,6 @@
         (with-handlers ([exn:fail:network? exn-handler])
           (displayln msg (connection-out conn))
           (flush-output (connection-out conn)))))
-
-    (displayln connections)
-    (displayln (filter (λ (conn)
-                         (not (eq? conn sender-conn)))
-                       connections))
 
     (if (null? sender-conn)
         (thread (λ () (map send-to connections)))
