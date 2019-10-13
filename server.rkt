@@ -3,6 +3,7 @@
 (require racket/tcp)
 
 
+(: PORT Natural)
 (define PORT 1234)
 
 

@@ -3,7 +3,10 @@
 (require racket/tcp typed/racket/gui typed/racket/draw)
 
 
+(: SERVER-IP String)
 (define SERVER-IP "127.0.0.1")
+
+(: SERVER-PORT Natural)
 (define SERVER-PORT 1234)
 
 
