@@ -1,8 +1,17 @@
+#+TITLE: RacketChat
 * Table of Contents                                         :TOC_4_gh:noexport:
 - [[#racketchat][racketchat]]
 - [[#usage][Usage]]
   - [[#server][Server]]
   - [[#client][Client]]
+- [[#wish-list][Wish List]]
+  - [[#注册与登录][注册与登录]]
+  - [[#发送图片文件][发送图片、文件]]
+  - [[#骰子机器人车卡工具][骰子机器人，车卡工具]]
+  - [[#联网][联网]]
+  - [[#个人空间界面音效支持][个人空间界面，音效支持]]
+  - [[#跑团房间功能][跑团房间功能]]
+  - [[#自制地图人物配音工具][自制地图、人物、配音工具]]
 
 * racketchat
   A multiuser TCP/IP based chat server and GUI client program
@@ -17,3 +26,12 @@
    To start the client run 'racket client.rkt'.
 
    By default the client connects to 127.0.0.1:1234. This can be changed at the top of client.rkt
+
+* Wish List
+** TODO 注册与登录
+** TODO 发送图片、文件
+** TODO 骰子机器人，车卡工具
+** TODO 联网
+** TODO 个人空间界面，音效支持
+** TODO 跑团房间功能
+** TODO 自制地图、人物、配音工具
