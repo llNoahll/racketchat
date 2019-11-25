@@ -11,6 +11,13 @@
 (define noah (new user%))
 
 
+(define init-user!
+  (λ (user key msg)
+    ((get key) msg)
+    (datalog users
+             (! (key msg user)))))
+
+
 (displayln (send noah get-uid))
 (displayln (send noah get-account))
 (displayln (send noah get-passwd))
@@ -54,7 +61,18 @@
 
 
 (datalog users
-         (! (normal-user noah)))
+         (! (normal-user noah))
+         (! (uid (send noah get-uid) noah))
+         (! (account (send noah get-account) noah))
+         (! (passwd (send noah get-passwd) noah))
+         (! (name (send noah get-name) noah))
+         (! (sex (send noah get-sex) noah))
+         (! (age (send noah get-age) noah))
+         (! (birthday (send noah get-birthday) noah))
+         (! (email (send noah get-email) noah))
+         (! (phone-number (send noah get-phone-number) noah))
+         (! (nickname (send noah get-nickname) noah))
+         (! (signup-date (send noah get-signup-date) noah)))
 
 (datalog users
          (? (normal-user USER)))

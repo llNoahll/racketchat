@@ -54,7 +54,7 @@
   (define/public (get-passwd) passwd)
 
   (: get-name [-> String])
-  (define/public (get-name) uid)
+  (define/public (get-name) name)
 
   (: get-sex [-> Char])
   (define/public (get-sex) sex)

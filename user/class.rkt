@@ -23,7 +23,7 @@
   (define/public (get-uid) uid)
   (define/public (get-account) account)
   (define/public (get-passwd) passwd)
-  (define/public (get-name) uid)
+  (define/public (get-name) name)
   (define/public (get-sex) sex)
   (define/public (get-age) age)
   (define/public (get-birthday) birthday)

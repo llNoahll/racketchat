@@ -31,3 +31,21 @@
 (displayln (send user-1 get-phone-number))
 (displayln (send user-1 get-nickname))
 (displayln (send user-1 get-signup-date))
+
+(datalog! users
+          (? (uid 87264592 USER))
+          (? (account "alifjq149709" USER))
+          (? (passwd "qofijofeq" USER))
+          (? (name "Noah WM" USER))
+          (? (sex #\m USER))
+          (? (age 20 USER))
+          (? (birthday '(2092 04 21) USER))
+          (? (email "noahstorym@gmail.com" USER))
+          (? (phone-number '(86 130 2417 0184) USER))
+          (? (nickname "NoahStoryM" USER))
+          (? (signup-date '(2020 02 20) USER)))
+
+(datalog users
+         (? (name "Noah WM" USER)))
+(datalog users
+         (? (name NAME USER)))
