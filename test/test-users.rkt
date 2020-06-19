@@ -81,4 +81,4 @@
 
 (call-with-output-file "../database/users.db" #:exists 'append
   (λ (out)
-    (writeln serilz-users out)))
+    (write serilz-users out)))

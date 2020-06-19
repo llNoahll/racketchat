@@ -49,3 +49,24 @@
          (? (name "Noah WM" USER)))
 (datalog users
          (? (name NAME USER)))
+
+
+(datalog users
+         (! (:- (age->name NAME AGE)
+                (age AGE USER)
+                (name NAME USER))))
+
+(datalog users
+         (! (:- (and% X Y)
+                (and X Y :- #t)))
+         (! (:- (or% X Y)
+                (or X Y :- #t)))
+         (! (:- (not% X)
+                (not X :- #t)))
+         )
+
+
+;; (datalog users
+;;          (? (eq? (? (age 20 USER))
+;;                  :-
+;;                  (? (name NAME USER)))))

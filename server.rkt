@@ -111,7 +111,9 @@
 (: get-username [-> Input-Port Output-Port String])
 (define get-username
   (λ (in out)
-    (: valid-username? [-> Any Boolean : #:+ (and String (! ""))])
+    (: valid-username? [-> Any Boolean :
+                           #:+ (and String (! ""))
+                           #:- (or "" (! String))])
     (define valid-username?
       (lambda (name)
         (define-predicate empty-string? "")
